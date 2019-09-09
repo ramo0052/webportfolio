@@ -1,0 +1,228 @@
+/*DESKTOP VIEW*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: "helvetica", "arial", sans-serif;
+}
+
+h1 {
+    font-size: 2.333em;
+}
+
+h2 {
+    font-size: 1.777em;
+}
+
+p {
+    font-size: 1.35em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav__home {
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro__title {
+    display: none;
+    visibility: hidden;
+}
+
+.intro::before {
+    content: "LUCAS ARISI";
+    color: white;
+    font-size: 2.33em;
+}
+
+.intro__subtitle {
+    display: none;
+    visibility: hidden;
+}
+
+.intro::after {
+    content: "student";
+    color: white;
+    font-size: 1.77em;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.work {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.gallery__card {
+    width: 98%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact__image {
+    order: 1;
+    margin-top: 5rem;
+}
+
+.form__name {
+    display: inline-block;
+}
+
+.form__email {
+    display: inline-block;
+    ;
+}
+
+
+.form__message {
+    margin-top: 10px;
+}
+
+input {
+    width: 98%;
+
+}
+
+.footer p {
+    display: none;
+    visibility: hidden;
+}
+
+.footer::before {
+    content: "2019 Lucas Arisi";
+    color: white;
+    font-size: 1em;
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+footer {
+    padding: 35px 15px;
+}
+
+/*TABLET VIEW*/
+@media (max-width: 780px) {
+
+    h1 {
+        font-size: 2.333em;
+    }
+
+    h2 {
+        font-size: 1.777em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .intro::before {
+        font-size: 1.77em;
+    }
+
+    .intro::after {
+        font-size: 1.33em;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work {
+        margin: 2rem;
+
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact__image {
+        order: 0;
+    }
+}
+
+/*MOBILE VIEW*/
+@media (max-width: 500px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .nav__home {
+        flex-direction:flex-start;
+        }
+    .nav__about, .nav__work, .nav__contact
+     {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro::before {
+        font-size: 1.33em;
+    }
+
+    .intro::after {
+        font-size: 1em;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact__image {
+        order: 0;
+    }
+}
